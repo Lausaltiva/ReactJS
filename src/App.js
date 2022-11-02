@@ -1,8 +1,7 @@
-import logo from './logo.svg';
 import './App.scss';
 import Navbar from './components/Navbar';
 import { ItemListContainer } from './components/ItemListContainer';
-
+import Footer from "./components/footer"
 
 
 
@@ -11,6 +10,7 @@ function App() {
     <div className='App'>
       <Navbar />
       <ItemListContainer />
+      <Footer />
     </div>
   );
 }
