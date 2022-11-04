@@ -1,14 +1,22 @@
 import { CartWidget } from "./CartWidget";
 import logo from "../imagenes/logo.png";
+import { Link, Navlink } from "react-router-dom";
 
+const links = ["Ropa", "Zapatillas", "Accesorios"];
 
 const Navbar = () => {
     return <header className="header">
-        <img src={logo} className="header__logo" alt="logo" />
+       <Link to='/'>
+            <img src={logo} className="header__logo" alt="logo" />
+        </Link>
         <div className="header__nav">
-            <a href="" className='header__nav_item' >Ropa</a>
-            <a href="" className='header__nav_item' >Accesorios</a>
-            <a href="" className='header__nav_item' >Zapatillas</a>
+            {links.map((elemento) => {
+                return (
+                    <Link className="header__nav_item" to={`/category/${elemento}`} key={elemento}>
+                        {elemento}
+                    </Link>
+                );
+            })}
         </div>
         <CartWidget />
     </header>
