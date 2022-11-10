@@ -5,9 +5,9 @@ export const UserLayout = ({ children }) => {
     return (
         <div className="userLayout">
             <Navbar />
-            <div className="children">
+            {/* <div className="children">
             {children}  
-            </div>
+            </div> */}
             <Footer />
         </div>
     );
