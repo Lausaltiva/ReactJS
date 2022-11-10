@@ -13,5 +13,5 @@ export const Detail = () => {
         getProduct(productId).then((data) => console.log(data));
     }, [productId]);
     
-    return <UserLayout> <ItemDetail /> </UserLayout>
+    return  <ItemDetail />
 };
